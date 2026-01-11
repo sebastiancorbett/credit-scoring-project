@@ -1,0 +1,116 @@
+{
+  "execution_info": {
+    "timestamp": "2026-01-08T05:02:05.395116",
+    "elapsed_time_seconds": 2104.13,
+    "elapsed_time_formatted": "35.1 minutes",
+    "tuning_enabled": false
+  },
+  "data_info": {
+    "is_synthetic": false,
+    "train_samples": 90000,
+    "validation_samples": 30000,
+    "test_samples": 30000,
+    "n_features": 31,
+    "feature_names": [
+      "Unnamed: 0",
+      "RevolvingUtilizationOfUnsecuredLines",
+      "age",
+      "NumberOfTime30-59DaysPastDueNotWorse",
+      "DebtRatio",
+      "MonthlyIncome",
+      "NumberOfOpenCreditLinesAndLoans",
+      "NumberOfTimes90DaysLate",
+      "NumberRealEstateLoansOrLines",
+      "NumberOfTime60-89DaysPastDueNotWorse",
+      "NumberOfDependents",
+      "DebtToIncomeRatio",
+      "DebtToIncomeCategory",
+      "LoanToAssetProxy",
+      "RealEstateLoanRatio",
+      "MonthlyDebtPayment",
+      "DiscretionaryIncome",
+      "IncomePerDependent",
+      "AgeGroup",
+      "AgeSquared",
+      "IsSenior",
+      "CreditUtilizationCategory",
+      "IsOverUtilized",
+      "TotalDelinquencies",
+      "HasDelinquency",
+      "DelinquencySeverity",
+      "CreditActivityLevel",
+      "NoCreditActivity",
+      "AgeIncomeInteraction",
+      "DebtDelinquencyInteraction",
+      "CreditLinesUtilizationInteraction"
+    ],
+    "class_distribution_train": {
+      "negative": 83984,
+      "positive": 6016
+    }
+  },
+  "methodology": {
+    "data_split": "train(60%)/validation(20%)/test(20%)",
+    "threshold_optimization": "on validation set (prevents data leakage)",
+    "final_evaluation": "on held-out test set",
+    "recall_constraints": {
+      "min_recall_positive": 0.3,
+      "min_recall_negative": 0.3
+    }
+  },
+  "optimal_thresholds": {
+    "Logistic Regression": 0.5073869346733668,
+    "Random Forest": 0.2710050251256282,
+    "XGBoost": 0.06417085427135678,
+    "Neural Network": 0.06909547738693467,
+    "SVM": 0.04447236180904523
+  },
+  "model_performance": {
+    "Logistic Regression": {
+      "roc_auc": 0.8575777648217374,
+      "precision": 0.20922276956759717,
+      "recall": 0.7625935162094764,
+      "recall_negative": 0.7935702804072156,
+      "f1_score": 0.3283582089552239,
+      "accuracy": 0.7915
+    },
+    "Random Forest": {
+      "roc_auc": 0.8588892744028481,
+      "precision": 0.2122386819880936,
+      "recall": 0.7645885286783043,
+      "recall_negative": 0.7967494195392034,
+      "f1_score": 0.33224967490247076,
+      "accuracy": 0.7946
+    },
+    "XGBoost": {
+      "roc_auc": 0.8614030827556935,
+      "precision": 0.21785714285714286,
+      "recall": 0.7605985037406484,
+      "recall_negative": 0.8044293623861404,
+      "f1_score": 0.3387007218212104,
+      "accuracy": 0.8015
+    },
+    "Neural Network": {
+      "roc_auc": 0.8609874135878378,
+      "precision": 0.2219947353027201,
+      "recall": 0.7571072319201995,
+      "recall_negative": 0.8099660653688159,
+      "f1_score": 0.3433224018998078,
+      "accuracy": 0.8064333333333333
+    },
+    "SVM": {
+      "roc_auc": 0.48210605830485403,
+      "precision": 0.06784297633702639,
+      "recall": 0.4947630922693267,
+      "recall_negative": 0.5131273441686015,
+      "f1_score": 0.11932399109881518,
+      "accuracy": 0.5119
+    }
+  },
+  "system_info": {
+    "python_version": "3.13.7",
+    "platform": "Windows",
+    "platform_release": "11",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel"
+  }
+}

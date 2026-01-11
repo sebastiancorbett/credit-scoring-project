@@ -1,0 +1,62 @@
+{
+  "Logistic Regression": {
+    "best_params": {
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "max_iter": 1000,
+      "class_weight": null,
+      "C": 0.01
+    },
+    "best_score": 0.8191878817720702
+  },
+  "Random Forest": {
+    "best_params": {
+      "n_estimators": 500,
+      "min_samples_split": 5,
+      "min_samples_leaf": 4,
+      "max_features": "sqrt",
+      "max_depth": 10,
+      "class_weight": "balanced",
+      "bootstrap": false
+    },
+    "best_score": 0.7963078292800221
+  },
+  "XGBoost": {
+    "best_params": {
+      "subsample": 0.6,
+      "scale_pos_weight": 10,
+      "n_estimators": 300,
+      "min_child_weight": 5,
+      "max_depth": 3,
+      "learning_rate": 0.01,
+      "gamma": 0.1,
+      "colsample_bytree": 0.6
+    },
+    "best_score": 0.8130301039497313
+  },
+  "SVM": {
+    "best_params": {
+      "kernel": "rbf",
+      "gamma": 0.001,
+      "degree": 4,
+      "class_weight": "balanced",
+      "C": 1.0
+    },
+    "best_score": 0.7892847392978896
+  },
+  "Neural Network": {
+    "best_params": {
+      "solver": "sgd",
+      "max_iter": 500,
+      "learning_rate": "constant",
+      "hidden_layer_sizes": [
+        100,
+        100
+      ],
+      "batch_size": 64,
+      "alpha": 0.001,
+      "activation": "tanh"
+    },
+    "best_score": 0.8110788816835072
+  }
+}
